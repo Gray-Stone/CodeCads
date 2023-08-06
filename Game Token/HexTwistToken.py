@@ -64,8 +64,8 @@ with bd.BuildPart() as hexcoin1:
 
     for face in outter_faces:
         with bd.BuildSketch(face) as cut_text:
-            bd.Text("5", font_size=5)
-        bd.extrude(cut_text.sketch, amount=-0.2, mode=bdMode.SUBTRACT)
+            bd.Text("5", font_size=5.5)
+        bd.extrude(cut_text.sketch, amount=-0.6, mode=bdMode.SUBTRACT)
 
 # hexcoin1.part.export_3mf(file_name="Gear.3mf",
 #                     tolerance=0.001,
