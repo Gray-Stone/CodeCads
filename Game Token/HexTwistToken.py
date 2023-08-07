@@ -72,7 +72,13 @@ with bd.BuildPart() as hexcoin1:
 #                     angular_tolerance=0.1,
 #                     unit=bd.Unit.MM)
 
-hexcoin1.part.export_step("token.step")
+import pathlib
+
+current_path = pathlib.Path(__file__).parent.resolve()
+
+print(f"Outputing to {current_path/'token.step'}")
+
+hexcoin1.part.export_step(str(current_path/"token.step"))
 
 # from ocp_vscode import show, show_object, reset_show, set_port, set_defaults, get_defaults
 # set_port(3939)
